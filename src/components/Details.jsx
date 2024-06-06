@@ -48,9 +48,9 @@ const Details = () => {
                     transition={{ duration: 0.5 }}
                     variants={aboutVariants}
                 >
-                    <h2 className="text-xl md:text-5xl font-semibold text-center md:text-left">Why Choose Us?</h2>
+                    <h2 className="text-xl md:text-5xl font-semibold md:px-6 text-center md:text-left">Why Choose Us?</h2>
                     <p className="text-gray-700 md:px-6 my-2 md:my-12 text-sm md:text-xl">Choosing BETHMAR LIMITED means partnering with a company that prioritizes quality, reliability, and innovation. <br /> Partner with BETHMAR LIMITED for your civil engineering and fiber infrastructure needs, and experience the difference that quality, expertise, and dedication can make. <br />  </p>
-                    <button className=" mt-4 px-4 md:px-8 flex py-2 md:py-3 md:mx-0 mx-auto bg-accentRed border-2 border-accentRed text-white text-sm md:text-xl font-semibold shadow-md hover:bg-accentRed-dark hover:border-accentRed-dark transition-transform transform hover:scale-105">Contact Now <span className='ml-2 self-center'><FaPhone /></span> </button>
+                    <button className=" mt-4 px-4  md:px-8 flex py-2 md:py-3 mx-auto bg-accentRed border-2 border-accentRed text-white text-sm md:text-xl font-semibold shadow-md hover:bg-accentRed-dark hover:border-accentRed-dark transition-transform transform hover:scale-105">Contact Now <span className='ml-2 self-center'><FaPhone /></span> </button>
                 </motion.div>
                 <motion.div
                     className=" md:w-1/2 md:px-4"

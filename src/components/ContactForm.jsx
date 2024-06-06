@@ -11,13 +11,13 @@ const ContactForm = () => {
         <div id="contact" className="py-6 md:py-12 bg-gray-100">
             <div className="flex flex-col md:flex-row max-w-[1400px] mx-auto space-y-8 md:space-y-0 md:space-x-12 p-4">
                 <motion.div
-                    className="md:w-1/2"
+                    className="md:w-1/2 md:p-4"
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 0.5 }}
                     variants={formVariants}
                 >
-                    <h2 className="text-left font-semibold text-lg md:text-4xl mb-3 md:mb-8 md:p-4">Contact Us</h2>
+                    <h2 className="text-left font-semibold text-lg md:text-5xl mb-3 md:mb-8 ">Contact Us</h2>
                     <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
                     <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Contact: 01707322748</p>
                     <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Email: info@bethmar.co.uk</p>
