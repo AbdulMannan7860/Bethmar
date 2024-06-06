@@ -8,11 +8,11 @@ const Footer = () => {
         <div className="py-4 md:py-8 bg-black text-white">
             <div className="max-w-[1400px] flex flex-col md:flex-row justify-between items-center mx-auto border-b border-gray-700 py-4 md:py-8 px-4 md:px-0">
                 <div className="text-sm md:text-xl px-4">
-                    <img src={logo} alt="Company Logo" className="w-auto h-[50px] md:h-[90px] " />
-                    <p>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
-                    <p>Contact: 01707322748</p>
-                    <p>Email: info@bethmar.co.uk</p>
-                    <div className="flex space-x-4 mt-4">
+                    <img src={logo} alt="Company Logo" className="w-auto h-[40px] md:h-[100px] " />
+                    <p className='px-4'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
+                    <p className='px-4'>Contact: 01707322748</p>
+                    <p className='px-4'>Email: info@bethmar.co.uk</p>
+                    <div className="flex space-x-4 mt-4 px-4">
                         <a href='#'><FaSquareFacebook className='h-10 w-10 hover:text-accentRed duration-300 transition-colors' /></a>
                         <a href='#'><FaSquareTwitter className='h-10 w-10 hover:text-accentRed duration-300 transition-colors' /></a>
                         <a href='#'><FaLinkedin className='h-10 w-10 hover:text-accentRed duration-300 transition-colors' /></a>
