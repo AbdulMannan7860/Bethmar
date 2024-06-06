@@ -61,7 +61,7 @@ const Banner = () => {
     };
 
     return (
-        <div className="bg-no-repeat bg-cover bg-center">
+        <div id="home" className="bg-no-repeat bg-cover bg-center">
             <Carousel
                 showThumbs={false}
                 autoPlay

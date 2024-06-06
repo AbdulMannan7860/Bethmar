@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import logo from '../assets/bethmar.png'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import logo from '../assets/bethmar.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,23 +34,43 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-24">
                     <div className="flex-shrink-0 flex items-center">
-                        <a href="#home" className="text-2xl font-bold">
-                            <img src={logo} alt="" className='h-20' />
+                        <a href="#" className="text-2xl font-bold">
+                            <img src={logo} alt="Bethmar" className='h-20' />
                         </a>
                     </div>
                     <div className="hidden md:flex space-x-4 items-center">
-                        <a href="#home" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
+                        <ScrollLink
+                            to="home"
+                            smooth={true}
+                            duration={500}
+                            className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium cursor-pointer"
+                        >
                             Home
-                        </a>
-                        <a href="#about" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
+                        </ScrollLink>
+                        <ScrollLink
+                            to="about"
+                            smooth={true}
+                            duration={500}
+                            className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium cursor-pointer"
+                        >
                             About
-                        </a>
-                        <a href="#projects" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
-                            Projects
-                        </a>
-                        <a href="#contact" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
+                        </ScrollLink>
+                        <ScrollLink
+                            to="services"
+                            smooth={true}
+                            duration={500}
+                            className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium cursor-pointer"
+                        >
+                            Services
+                        </ScrollLink>
+                        <ScrollLink
+                            to="contact"
+                            smooth={true}
+                            duration={500}
+                            className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium cursor-pointer"
+                        >
                             Contact
-                        </a>
+                        </ScrollLink>
                     </div>
                     <div className="-mr-2 flex md:hidden">
                         <button
@@ -71,18 +92,42 @@ const Navbar = () => {
                 className="md:hidden"
             >
                 <div className="px-5 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#home" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                    <ScrollLink
+                        to="home"
+                        smooth={true}
+                        duration={500}
+                        className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 cursor-pointer"
+                        onClick={toggleMenu}
+                    >
                         Home
-                    </a>
-                    <a href="#about" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                    </ScrollLink>
+                    <ScrollLink
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                        className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 cursor-pointer"
+                        onClick={toggleMenu}
+                    >
                         About
-                    </a>
-                    <a href="#projects" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                    </ScrollLink>
+                    <ScrollLink
+                        to="projects"
+                        smooth={true}
+                        duration={500}
+                        className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 cursor-pointer"
+                        onClick={toggleMenu}
+                    >
                         Projects
-                    </a>
-                    <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
+                    </ScrollLink>
+                    <ScrollLink
+                        to="contact"
+                        smooth={true}
+                        duration={500}
+                        className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 cursor-pointer"
+                        onClick={toggleMenu}
+                    >
                         Contact
-                    </a>
+                    </ScrollLink>
                 </div>
             </motion.div>
         </nav>

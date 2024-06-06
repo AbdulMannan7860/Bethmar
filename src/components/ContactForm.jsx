@@ -8,7 +8,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="py-6 md:py-12 bg-gray-100">
+        <div id="contact" className="py-6 md:py-12 bg-gray-100">
             <div className="flex flex-col md:flex-row max-w-[1400px] mx-auto space-y-8 md:space-y-0 md:space-x-12 p-4">
                 <motion.div
                     className="md:w-1/2"

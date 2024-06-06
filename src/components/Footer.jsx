@@ -23,16 +23,16 @@ const Footer = () => {
                         <h4 className="mb-4 md:text-3xl text-lg font-semibold text-accentRed">Quick Links</h4>
                         <ol className='px-4 md:text-xl text-base'>
                             <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#services">Services</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#projects">Projects</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#about">About</a></li>
                             <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#contact">Contact</a></li>
                         </ol>
                     </div>
                     <div className="self-center px-4">
                         <h4 className="mb-4 md:text-3xl text-lg font-semibold text-accentRed ">Our Projects</h4>
                         <ol className='px-4 md:text-xl text-base'>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project">Project 1</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project">Project 2</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project">Project 3</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project1">London Urban Fiber Optic Expansion</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project2">Rural Broadband Initiative</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project3">Smart City Infrastructure Development</a></li>
                         </ol>
                     </div>
                 </div>
