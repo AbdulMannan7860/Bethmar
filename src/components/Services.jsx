@@ -8,6 +8,7 @@ import site from '../assets/site build.svg';
 import trenching from '../assets/trenching.svg';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import transformer from '../assets/transformer.jpg';
 
 const services = [
     { image: Aerial, text: 'Aerial Fiber & Underground Construction', description: "BethMar specializes in aerial and underground telecommunications construction. We have years of experience and cutting-edge equipment. We have completed thousands of overhead and underground projects. We commit to delivering quality, timely solutions that are budget-friendly. This makes us your trusted partner for all telecom infrastructure needs." },
@@ -20,27 +21,37 @@ const services = [
 ];
 
 const Services = () => {
+    const divStyle = {
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)) , url(${transformer})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundAttachment: 'fixed',
+    }
+
     const cardVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
     };
 
     return (
-        <div className="services py-12 bg-primary-dark">
-            <h2 className="text-center text-3xl mb-8 text-white font-bold">Our Services</h2>
-            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+        <div className="services bg-gray-100">
+            <div className='text-center text-lg md:text-3xl mb-8 text-white font-bold bg-accentRed py-6'>
+                <h2 className="mx-12 md:mx-auto">Check Out Our Comprehensive List of Services & Solutions</h2>
+            </div>
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-4 md:mx-auto">
                 {services.map((service, index) => {
                     const [ref, inView] = useInView({ triggerOnce: false });
 
                     return (
                         <div
                             key={index}
-                            className="flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+                            className="flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 bg-white shadow-lg py-12 px-6 rounded-lg md:py-4"
                         >
-                            <img src={service.image} alt={service.text} className="w-32 h-32 object-cover object-center mx-auto " />
+                            <img src={service.image} alt={service.text} className="w-24 h-24 md:w-32 md:h-32 object-cover object-center mx-auto" />
                             <div
                                 ref={ref}
-                                className='p-1 bg-accentRed-dark animate-pulse my-3'></div>
+                                className=' bg-accentRed animate-pulse my-3'></div>
                             <motion.div
                                 className='p-4 flex-grow'
                                 initial="hidden"
@@ -48,14 +59,14 @@ const Services = () => {
                                 variants={cardVariants}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <h3 className="text-3xl font-semibold mb-2 text-white ">{service.text}</h3>
-                                <p className='text-white text-lg py-4 '>{service.description}</p>
+                                <h3 className="text-xl md:text-3xl font-semibold mb-2 text-black ">{service.text}</h3>
+                                <p className='text-black text-sm md:text-lg py-4 '>{service.description}</p>
                             </motion.div>
                         </div>
                     );
                 })}
             </div>
-        </div>
+        </div >
     );
 };
 

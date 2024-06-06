@@ -29,25 +29,25 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-accentGreen-dark text-white">
+        <nav className="bg-black text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-16">
+                <div className="flex justify-between h-24">
                     <div className="flex-shrink-0 flex items-center">
                         <a href="#home" className="text-2xl font-bold">
                             <img src={logo} alt="" className='h-20' />
                         </a>
                     </div>
                     <div className="hidden md:flex space-x-4 items-center">
-                        <a href="#home" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="#home" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
                             Home
                         </a>
-                        <a href="#about" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="#about" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
                             About
                         </a>
-                        <a href="#projects" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="#projects" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
                             Projects
                         </a>
-                        <a href="#contact" className="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                        <a href="#contact" className="hover:bg-gray-700 px-3 py-2 rounded-md text-lg font-medium">
                             Contact
                         </a>
                     </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
                 variants={navVariants}
                 className="md:hidden"
             >
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <div className="px-5 pt-2 pb-3 space-y-1 sm:px-3">
                     <a href="#home" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">
                         Home
                     </a>

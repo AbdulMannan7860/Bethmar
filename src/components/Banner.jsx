@@ -3,6 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import banner1 from '../assets/excavator.jpeg';
 import banner2 from '../assets/fiberRoll.jpg';
+import banner3 from '../assets/Underground.jpeg';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Banner = () => {
@@ -46,7 +47,7 @@ const Banner = () => {
             id: 2,
             text: "Connecting the Dots, Between People & Possibilities.",
             buttonText: "Join Us",
-            background: banner1
+            background: banner3
         },
     ];
 
@@ -73,7 +74,7 @@ const Banner = () => {
             >
                 {slides.map((slide, index) => (
                     <div
-                        className="flex items-center justify-center h-[75vh] p-8"
+                        className="flex items-center justify-center h-[40vh] md:h-[90vh] p-8"
                         key={slide.id}
                         style={divStyle}
                     >
@@ -83,7 +84,7 @@ const Banner = () => {
                                     <>
                                         <motion.h2
                                             key={`h2-${slide.id}`}
-                                            className="mx-auto text-white text-6xl p-4 font-bold mt-4 bg-slate-500 bg-opacity-70"
+                                            className="mx-auto text-white text-xl md:text-6xl p-1 md:p-4 font-bold mt-4 bg-gray-900 bg-opacity-40"
                                             initial="initial"
                                             animate="animate"
                                             exit="exit"
@@ -94,7 +95,7 @@ const Banner = () => {
                                         </motion.h2>
                                         <motion.button
                                             key={`button-${slide.id}`}
-                                            className="mt-4 px-8 py-3 bg-accentGreen-dark text-white text-3xl font-semibold shadow-md hover:bg-accentGreen transition-transform transform hover:scale-105"
+                                            className="mt-4 px-4 md:px-8 py-2 md:py-3 bg-accentRed border-2 border-accentRed text-white text-base md:text-3xl font-semibold shadow-md hover:bg-accentRed-dark hover:border-accentRed-dark transition-transform transform hover:scale-105"
                                             initial="initial"
                                             animate="animate"
                                             exit="exit"

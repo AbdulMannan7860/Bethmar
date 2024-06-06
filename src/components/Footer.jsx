@@ -5,37 +5,39 @@ import logo from '../assets/bethmar.png'
 
 const Footer = () => {
     return (
-        <div className="footer py-8 bg-black text-white">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px]">
-                <div className="">
-                    <img src={logo} alt="Company Logo" className="w-auto h-[90px] " />
+        <div className="py-4 md:py-8 bg-black text-white">
+            <div className="max-w-[1400px] flex flex-col md:flex-row justify-between items-center mx-auto border-b border-gray-700 py-4 md:py-8 px-4 md:px-0">
+                <div className="text-sm md:text-xl px-4">
+                    <img src={logo} alt="Company Logo" className="w-auto h-[50px] md:h-[90px] " />
                     <p>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
                     <p>Contact: 01707322748</p>
-                    <p>Email: info@bethmar.com</p>
+                    <p>Email: info@bethmar.co.uk</p>
                     <div className="flex space-x-4 mt-4">
-                        <FaSquareFacebook />
-                        <FaSquareTwitter />
-                        <FaLinkedin />
+                        <a href='#'><FaSquareFacebook className='h-10 w-10 hover:text-accentRed duration-300 transition-colors' /></a>
+                        <a href='#'><FaSquareTwitter className='h-10 w-10 hover:text-accentRed duration-300 transition-colors' /></a>
+                        <a href='#'><FaLinkedin className='h-10 w-10 hover:text-accentRed duration-300 transition-colors' /></a>
                     </div>
                 </div>
-                <div className="self-center px-4">
-                    <h4 className="mb-4 ">Quick Links</h4>
-                    <ol className='px-4'>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ol>
-                </div>
-                <div className="self-center px-4">
-                    <h4 className="mb-4 ">Our Projects</h4>
-                    <ol className='px-4'>
-                        <li>Project 1</li>
-                        <li>Project 2</li>
-                        <li>Project 3</li>
-                    </ol>
+                <div className='flex justify-around md:w-1/2 w-auto py-4 md:py-0'>
+                    <div className="self-center px-4">
+                        <h4 className="mb-4 md:text-3xl text-lg font-semibold text-accentRed">Quick Links</h4>
+                        <ol className='px-4 md:text-xl text-base'>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#services">Services</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#projects">Projects</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#contact">Contact</a></li>
+                        </ol>
+                    </div>
+                    <div className="self-center px-4">
+                        <h4 className="mb-4 md:text-3xl text-lg font-semibold text-accentRed ">Our Projects</h4>
+                        <ol className='px-4 md:text-xl text-base'>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project">Project 1</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project">Project 2</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed hover:underline hover:decoration-2 transition duration-300'><a href="#project">Project 3</a></li>
+                        </ol>
+                    </div>
                 </div>
             </div>
-            <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm max-w-[1200px] mx-auto">
+            <div className="pt-4 text-center text-xs md:text-lg max-w-[1200px] mx-auto px-4 md:px-0 ">
                 <div className="flex justify-between items-center">
                     <div>
                         <a href="#terms" className="mr-4">Terms & Conditions</a>

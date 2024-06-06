@@ -6,14 +6,16 @@ import LocationMap from './components/LocationMap';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Details from './components/Details';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Banner />
-      <Services />
       <About />
+      <Services />
+      <Details />
       <LocationMap />
       <ContactForm />
       <Footer />
