@@ -6,10 +6,11 @@ import AboutUs from '../assets/AboutUs.jpeg';
 import transformer from '../assets/transformer.jpg';
 import project1 from '../assets/Project1.jpg';
 import project2 from '../assets/Project2.jpg';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     const divStyle = {
-        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)) , url(${transformer})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.0)), linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.6)) , url(${transformer})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
@@ -66,7 +67,9 @@ const About = () => {
                     variants={aboutVariants}
                 >
                     <h2 className="text-xl md:text-5xl font-semibold md:px-6 text-center md:text-left">About Us</h2>
-                    <p className="text-gray-700 md:px-6 my-2 md:my-4 text-sm md:text-xl">BETHMAR LIMITED is a renowned leader in civil engineering and fiber infrastructure within the U.K. telecommunications industry. Founded in 2013, we have rapidly built a reputation for excellence and reliability, leveraging our expertise to deliver top-tier solutions. Our team of seasoned professionals is dedicated to enhancing the telecommunications landscape through innovative engineering practices and cutting-edge technology.</p>
+                    <div className='w-52 h-1 bg-accentRed-dark my-4 md:mx-6 mx-4'></div>
+                    <p className="text-gray-700 md:px-6 my-2 md:my-8 text-sm md:text-xl text-justify">BETHMAR LIMITED is a renowned leader in civil engineering and fiber infrastructure within the U.K. telecommunications industry. Founded in 2013, we have rapidly built a reputation for excellence and reliability, leveraging our expertise to deliver top-tier solutions. Our team of seasoned professionals is dedicated to enhancing the telecommunications landscape through innovative engineering practices and cutting-edge technology.</p>
+                    <Link to="/about" className=" mt-4 px-4 flex w-4/12 md:px-8 py-2 md:py-3 mx-6 bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-xl font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More</Link>
                 </motion.div>
                 <motion.div
                     className="md:w-1/2 md:px-4"
@@ -79,7 +82,8 @@ const About = () => {
                 </motion.div>
             </div>
             <div className="projects py-12 mt-8" style={divStyle}>
-                <h2 className="text-center text-xl md:text-5xl mb-8 text-white">Our Projects</h2>
+                <h2 className="text-center text-xl md:text-5xl font-semibold text-white">Our Projects</h2>
+                <div className='w-72 h-1 bg-accentRed-dark my-4 mx-auto mb-8'></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:max-w-[1400px] mx-auto md:px-0 px-4">
                     {Projects.map((project, index) => {
                         const [ref, inView] = useInView({ triggerOnce: false });
@@ -105,7 +109,7 @@ const About = () => {
                                         exit="hidden"
                                         variants={aboutVariants}
                                     >
-                                        <p className={`${expanded[index] ? '' : 'line-clamp-4'}`}>{project.description}</p>
+                                        <p className={`${expanded[index] ? 'text-justify' : 'line-clamp-4 text-justify'}`}>{project.description}</p>
                                     </motion.div>
                                 </AnimatePresence>
                                 <button

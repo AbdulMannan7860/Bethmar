@@ -17,7 +17,8 @@ const ContactForm = () => {
                     transition={{ duration: 0.5 }}
                     variants={formVariants}
                 >
-                    <h2 className="text-left font-semibold text-lg md:text-5xl mb-3 md:mb-8 ">Contact Us</h2>
+                    <h2 className="text-left font-semibold text-lg md:text-5xl mb-3 ">Contact Us</h2>
+                    <div className='w-5/12 h-1 bg-accentRed-dark mb-4'></div>
                     <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
                     <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Contact: 01707322748</p>
                     <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Email: info@bethmar.co.uk</p>
@@ -54,7 +55,7 @@ const ContactForm = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-4 py-2 bg-accentRed text-white text-sm md:text-base rounded shadow-md hover:bg-accentRed-dark transition-all duration-300"
+                                className="px-4 py-2 bg-accentRed-dark text-white text-sm md:text-base rounded shadow-md hover:bg-accentRed transition-all duration-300"
                                 type="submit"
                             >
                                 Send Message

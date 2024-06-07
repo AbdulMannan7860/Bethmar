@@ -7,6 +7,7 @@ import constructionImg from '../assets/ConstructionServices.jpg';
 import reliableServices from '../assets/ReliableServices.jpg';
 import supportTeam from '../assets/SupportTeam.jpeg';
 import WhyUs from '../assets/WhyUs.jpeg';
+import { Link } from 'react-router-dom';
 
 const Details = () => {
     const aboutVariants = {
@@ -32,7 +33,7 @@ const Details = () => {
         img: reliableServices
     },
     {
-        des: "At BETHMAR LIMITED, we prioritize our clients’ needs and strive to build long-term relationships based on trust and mutual respect. Our dedicated support team is always ready to address any issues and provide rapid-response services in emergencies. Our engineers and technicians are highly qualified and continually undergo training to stay updated with industry standards and best practices. This ensures that our team can handle even the most complex and challenging projects with confidence.",
+        des: "At BETHMAR LIMITED, we prioritize our client’s needs and strive to build long-term relationships based on trust and mutual respect. Our dedicated support team is always ready to address any issues and provide rapid-response services in emergencies. Our engineers and technicians are highly qualified and continually undergo training to stay updated with industry standards and best practices. This ensures that our team can handle even the most complex and challenging projects with confidence.",
         title: "Dedicated Support Team.",
         img: supportTeam
     }];
@@ -49,8 +50,9 @@ const Details = () => {
                     variants={aboutVariants}
                 >
                     <h2 className="text-xl md:text-5xl font-semibold md:px-6 text-center md:text-left">Why Choose Us?</h2>
-                    <p className="text-gray-700 md:px-6 my-2 md:my-12 text-sm md:text-xl">Choosing BETHMAR LIMITED means partnering with a company that prioritizes quality, reliability, and innovation. <br /> Partner with BETHMAR LIMITED for your civil engineering and fiber infrastructure needs, and experience the difference that quality, expertise, and dedication can make. <br />  </p>
-                    <button className=" mt-4 px-4  md:px-8 flex py-2 md:py-3 mx-auto bg-accentRed border-2 border-accentRed text-white text-sm md:text-xl font-semibold shadow-md hover:bg-accentRed-dark hover:border-accentRed-dark transition-transform transform hover:scale-105">Contact Now <span className='ml-2 self-center'><FaPhone /></span> </button>
+                    <div className='w-96 h-1 bg-accentRed-dark my-4 md:mx-6 mx-auto'></div>
+                    <p className="text-gray-700 md:px-6 my-2 md:my-12 text-sm md:text-xl text-justify">Choosing <span className='font-semibold text-black'>BETHMAR LIMITED</span> means partnering with a company that prioritizes quality, reliability, and innovation. <br /> Partner with us for your civil engineering and fiber infrastructure needs, and experience the difference that quality, expertise, and dedication can make. <br />  </p>
+                    <Link to="/contact" className=" mt-4 px-4 flex w-4/12 md:px-8 py-2 md:py-3 mx-6 bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-xl font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Contact Now <span className='ml-2 self-center'><FaPhone /></span> </Link>
                 </motion.div>
                 <motion.div
                     className=" md:w-1/2 md:px-4"
@@ -66,19 +68,19 @@ const Details = () => {
                 <div className='flex p-4 md:p-6 rounded-md space-x-4'>
                     <h1
                         onClick={() => handleChange(0)}
-                        className={`text-lg md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 0 ? 'bg-accentRed text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
+                        className={`text-lg md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 0 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
                     >
                         Professional Services
                     </h1>
                     <h1
                         onClick={() => handleChange(1)}
-                        className={`text-lg md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 1 ? 'bg-accentRed text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
+                        className={`text-lg md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 1 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
                     >
                         Reliable Solutions
                     </h1>
                     <h1
                         onClick={() => handleChange(2)}
-                        className={`text-lg md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 2 ? 'bg-accentRed text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
+                        className={`text-lg md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 2 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
                     >
                         Support Team
                     </h1>
@@ -90,8 +92,8 @@ const Details = () => {
                                 <img src={descriptions[selected].img} alt="" className='w-auto h-auto  pb-4' />
                             </div>
                             <div className='md:w-6/12'>
-                                <h1 className='text-lg md:text-2xl font-semibold md:px-6 md:py-4'>{descriptions[selected].title}</h1>
-                                <p className="text-gray-700 md:px-6 my-2 md:my-4 px-2 text-sm md:text-xl">
+                                <h2 className='text-lg md:text-2xl font-semibold md:px-6 md:py-4'>{descriptions[selected].title}</h2>
+                                <p className="text-gray-700 md:px-6 my-2 md:my-4 px-2 text-sm md:text-xl text-justify">
                                     {descriptions[selected].des}
                                 </p>
                             </div>
