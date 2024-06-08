@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import about from '../assets/Banner1.jpeg';
@@ -7,6 +7,7 @@ import transformer from '../assets/transformer.jpg';
 import project1 from '../assets/Project1.jpg';
 import project2 from '../assets/Project2.jpg';
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from "react-icons/fa";
 
 const About = () => {
     const divStyle = {
@@ -43,6 +44,12 @@ const About = () => {
         setExpanded(newExpanded);
     };
 
+    const handleOutOfView = (index) => {
+        const newExpanded = [...expanded];
+        newExpanded[index] = false;
+        setExpanded(newExpanded);
+    };
+
     const aboutVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
@@ -57,36 +64,42 @@ const About = () => {
 
     return (
         <div id="about" className="py-12 bg-gray-100 mx-auto">
-            <div className="container mx-auto flex flex-col md:flex-row items-center md:w-[1400px] bg-white rounded shadow-lg py-6">
-                <motion.div
+            <motion.div
+                initial="hidden"
+                animate={aboutInView ? 'visible' : 'hidden'}
+                transition={{ duration: 0.7 }}
+                variants={aboutVariants}
+                className="container mx-auto flex flex-col md:flex-row items-center md:max-w-[1300px] bg-white rounded shadow-lg py-6">
+                <div
                     ref={aboutRef}
                     className="md:w-1/2 px-4"
-                    initial="hidden"
-                    animate={aboutInView ? 'visible' : 'hidden'}
-                    transition={{ duration: 0.5 }}
-                    variants={aboutVariants}
+
                 >
-                    <h2 className="text-xl md:text-5xl font-semibold md:px-6 text-center md:text-left">About Us</h2>
+                    <h2 className="text-xl md:text-4xl font-semibold md:px-6 text-center md:text-left">About Us</h2>
                     <div className='w-52 h-1 bg-accentRed-dark my-4 md:mx-6 mx-4'></div>
-                    <p className="text-gray-700 md:px-6 my-2 md:my-8 text-sm md:text-xl text-justify">BETHMAR LIMITED is a renowned leader in civil engineering and fiber infrastructure within the U.K. telecommunications industry. Founded in 2013, we have rapidly built a reputation for excellence and reliability, leveraging our expertise to deliver top-tier solutions. Our team of seasoned professionals is dedicated to enhancing the telecommunications landscape through innovative engineering practices and cutting-edge technology.</p>
-                    <Link to="/about" className=" mt-4 px-4 flex w-4/12 md:px-8 py-2 md:py-3 mx-6 bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-xl font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More</Link>
-                </motion.div>
-                <motion.div
+                    <p className="text-gray-700 md:px-6 my-2 md:my-8 text-sm md:text-base text-justify">BETHMAR LIMITED is a renowned leader in civil engineering and fiber infrastructure within the U.K. telecommunications industry. Founded in 2013, we have rapidly built a reputation for excellence and reliability, leveraging our expertise to deliver top-tier solutions. Our team of seasoned professionals is dedicated to enhancing the telecommunications landscape through innovative engineering practices and cutting-edge technology.</p>
+                    <Link to="/about" className=" mt-4 px-4 flex w-4/12 md:px-8 py-2 md:py-3 mx-6 bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-lg font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More <span className="ml-2 self-center"> <FaArrowRight /> </span> </Link>
+                </div>
+                <div
                     className="md:w-1/2 md:px-4"
-                    initial="hidden"
-                    animate={aboutInView ? 'visible' : 'hidden'}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    variants={aboutVariants}
                 >
                     <img src={AboutUs} alt="About Us" className="w-full h-auto rounded md:px-0 px-4" />
-                </motion.div>
-            </div>
-            <div className="projects py-12 mt-8" style={divStyle}>
-                <h2 className="text-center text-xl md:text-5xl font-semibold text-white">Our Projects</h2>
+                </div>
+            </motion.div>
+            <div className="py-12 mt-8" style={divStyle}>
+                <h2 className="text-center text-xl md:text-4xl font-semibold text-white">Our Projects</h2>
                 <div className='w-72 h-1 bg-accentRed-dark my-4 mx-auto mb-8'></div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:max-w-[1400px] mx-auto md:px-0 px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:max-w-[1300px] mx-auto md:px-0 px-4">
                     {Projects.map((project, index) => {
                         const [ref, inView] = useInView({ triggerOnce: false });
+                        const [pRef, pInView] = useInView({
+                            triggerOnce: false,
+                            onChange: (inView) => {
+                                if (!inView) {
+                                    handleOutOfView(index);
+                                }
+                            }
+                        });
                         return (
                             <motion.div
                                 key={index}
@@ -94,7 +107,7 @@ const About = () => {
                                 className={`p-4 bg-white rounded shadow hover:shadow-lg transition-shadow duration-300 ${expanded[index] ? 'max-h-auto' : 'max-h-[450px]'}`}
                                 initial="hidden"
                                 animate={inView ? "visible" : "hidden"}
-                                transition={{ duration: 0.5, delay: index * 0.2 }}
+                                transition={{ duration: 0.7, delay: index * 0.2 }}
                                 variants={projectVariants}
                             >
                                 <img src={project.image} alt={project.text} className="w-full h-48 object-cover rounded mb-4" />
@@ -109,7 +122,7 @@ const About = () => {
                                         exit="hidden"
                                         variants={aboutVariants}
                                     >
-                                        <p className={`${expanded[index] ? 'text-justify' : 'line-clamp-4 text-justify'}`}>{project.description}</p>
+                                        <p ref={pRef} className={`${expanded[index] ? 'text-justify' : 'line-clamp-4 text-justify'} text-base`}>{project.description}</p>
                                     </motion.div>
                                 </AnimatePresence>
                                 <button
