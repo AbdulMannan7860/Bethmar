@@ -1,8 +1,13 @@
 import React from 'react'
+import LocationMap from '../components/LocationMap'
+import ContactForm from '../components/ContactForm'
 
 const Contact = () => {
     return (
-        <div>Contact</div>
+        <>
+            <LocationMap />
+            <ContactForm />
+        </>
     )
 }
 

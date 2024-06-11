@@ -8,9 +8,9 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 const services = [
-    { image: Aerial, text: 'Aerial Fiber & Underground Construction', description: "BethMar specializes in aerial and underground telecommunications construction. We have years of experience and cutting-edge equipment. We have completed thousands of overhead and underground projects. We commit to delivering quality, timely solutions that are budget-friendly. This makes us your trusted partner for all telecom infrastructure needs." },
-    { image: Fiber, text: 'Fiber Optic Testing & Splicing', description: "Our fiber-optic splicing services use the latest equipment, allowing us to work even in the most remote locations. We document all splicing work thoroughly and provide every customer with a proof of performance document upon completion." },
-    { image: trenching, text: 'Underground Trenching & Directional Boring', description: "At BethMar, we use advanced trenchless technology to install fiber optic networks with minimal disruption to the environment. We can install fiber beneath buildings, highways, water bodies, and rock formations. Our services also include trenchless installation and maintenance of water lines, sewer systems, and sprinkler systems." },
+    { image: Aerial, text: 'Aerial Fibre & Underground Construction', description: "BethMar specializes in aerial and underground telecommunications construction. We have years of experience and cutting-edge equipment. We have completed thousands of overhead and underground projects. We commit to delivering quality, timely solutions that are budget-friendly. This makes us your trusted partner for all telecom infrastructure needs." },
+    { image: Fiber, text: 'Fibre Optic Testing & Splicing', description: "Our Fibre-optic splicing services use the latest equipment, allowing us to work even in the most remote locations. We document all splicing work thoroughly and provide every customer with a proof of performance document upon completion." },
+    { image: trenching, text: 'Underground Trenching & Directional Boring', description: "At BethMar, we use advanced trenchless technology to install Fibre optic networks with minimal disruption to the environment. We can install Fibre beneath buildings, highways, water bodies, and rock formations. Our services also include trenchless installation and maintenance of water lines, sewer systems, and sprinkler systems." },
 ];
 
 const HomeServices = () => {
@@ -49,7 +49,7 @@ const HomeServices = () => {
                                 <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black ">{service.text}</h3>
                                 <p className='text-gray-700 text-sm md:text-base py-4 text-justify'>{service.description}</p>
                             </div>
-                            <div className='w-6/12 mx-auto'>
+                            <div className='md:w-6/12 mx-auto'>
                                 <Link to="/services" className="px-4 flex w-12/12 md:px-8 py-2 md:py-3 bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-base font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More <span className="ml-2 self-center"> <FaArrowRight /> </span> </Link>
                             </div>
                         </motion.div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import banner1 from '../assets/excavator.jpeg';
+import banner1 from '../assets/Excavator1.jpg';
 import banner2 from '../assets/fiberRoll.jpg';
 import banner3 from '../assets/Underground.jpeg';
 import { motion, AnimatePresence } from 'framer-motion';

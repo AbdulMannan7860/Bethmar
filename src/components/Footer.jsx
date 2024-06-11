@@ -3,6 +3,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import logo from '../assets/bethmar.png'
 import Fiber from '../assets/Footer.jpeg'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const divStyle = {
@@ -30,15 +31,15 @@ const Footer = () => {
                     <div className="self-center px-4">
                         <h4 className="mb-4 md:text-2xl font-serif text-lg font-bold text-accentRed-dark">Quick Links</h4>
                         <ol className='md:text-base text-base px-1'>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#services">Services</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#about">About</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#contact">Contact</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to='/services'>Services</Link></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to='/civil'>Civil Solutions</Link></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to='/fiber'>Fibre Solutions</Link></li>
                         </ol>
                     </div>
                     <div className="self-center px-4">
                         <h4 className="mb-4 md:text-2xl font-serif text-lg font-bold text-accentRed-dark ">Our Projects</h4>
                         <ol className='md:text-base text-base px-1'>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project1">London Urban Fiber Optic Expansion</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project1">London Urban Fibre Optic Expansion</a></li>
                             <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project2">Rural Broadband Initiative</a></li>
                             <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project3">Smart City Infrastructure Development</a></li>
                         </ol>

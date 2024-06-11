@@ -98,7 +98,7 @@ const Navbar = () => {
                 text: "Services", dropdown: true, dropdownLinks: [
                     { to: "/services", text: "Our Services" },
                     { to: "/civil", text: "Civil Services" },
-                    { to: "/fiber", text: "Fiber Services" }
+                    { to: "/fiber", text: "Fibre Services" }
                 ]
             },
             { to: "/contact", text: "Contact" }
@@ -113,12 +113,12 @@ const Navbar = () => {
                     {isDropdown ? (
                         <div className="relative inline-block">
                             <button
-                                className={`hover:bg-gray-200 px-3 py-2 text-lg font-medium cursor-pointer flex items-center ${isSelected ? 'bg-gray-200' : ''}`}
+                                className={`hover:bg-gray-200 px-3 py-2 text-lg font-medium cursor-pointer flex items-center w-full ${isSelected ? 'bg-gray-200' : ''}`}
                                 onClick={toggleMenu}
                             >
-                                {link.text} {isOpen ? <AiOutlineUp className="h-4 w-4 ml-1" /> : <AiOutlineDown className="h-4 w-4 ml-1" />}
+                                {link.text} {isOpen ? <AiOutlineUp className="h-4 w-4 ml-auto" /> : <AiOutlineDown className="h-4 w-4 ml-1" />}
                             </button>
-                            <div className={`absolute z-10 mt-2 w-32 bg-white rounded-md shadow-lg ${isOpen ? '' : 'hidden'}`}>
+                            <div className={`absolute z-10 mt-2 w-32 bg-white rounded-md shadow-lg md:ml-0 ml-[200px] ${isOpen ? '' : 'hidden'}`}>
                                 {link.dropdownLinks.map((dropdownLink, dropdownIndex) => (
                                     <Link
                                         key={dropdownIndex}

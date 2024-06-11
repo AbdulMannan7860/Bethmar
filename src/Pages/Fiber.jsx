@@ -17,18 +17,18 @@ const Fiber = () => {
     return (
         <>
             <div style={divStyle}>
-                <div className='h-[40vh] md:h-[90vh] justify-center flex flex-col'>
+                <div className='h-[60vh] md:h-[90vh] justify-center flex flex-col'>
                     <motion.h2
-                        className="text-center text-3xl md:text-8xl text-white font-bold py-12 md:py-20"
+                        className="text-center text-3xl md:text-8xl text-white font-bold py-6 md:py-20"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        Fiber Services
+                        Fibre Services
                     </motion.h2>
 
                     <motion.p
-                        className="mx-auto w-6/12 text-sm md:text-sm text-white font-semibold text-justify "
+                        className="mx-auto px-4 md:w-6/12 text-sm md:text-base text-white font-semibold text-justify "
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.5 }}
@@ -39,6 +39,7 @@ const Fiber = () => {
                 </div>
                 <FiberCards />
             </div>
+
             <CounterSection />
             <ContactUs />
         </>

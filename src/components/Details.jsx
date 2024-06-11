@@ -48,10 +48,10 @@ const Details = () => {
                     transition={{ duration: 0.7 }}
                     variants={aboutVariants}
                 >
-                    <h2 className="text-xl md:text-4xl font-semibold md:px-6 text-center md:text-left">Why Choose Us?</h2>
-                    <div className='w-96 h-1 bg-accentRed-dark my-4 md:mx-6 mx-auto'></div>
-                    <p className="text-gray-700 md:px-6 my-2 md:my-12 text-sm md:text-base text-justify">Choosing <span className='font-semibold text-black'>BETHMAR LIMITED</span> means partnering with a company that prioritizes quality, reliability, and innovation. <br /> Partner with us for your civil engineering and fiber infrastructure needs, and experience the difference that quality, expertise, and dedication can make. <br />  </p>
-                    <Link to="/contact" className=" mt-4 px-4 flex w-4/12 md:px-8 py-2 md:py-3 mx-6 bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-lg font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Contact Now <span className='ml-2 self-center'><FaPhone /></span> </Link>
+                    <h2 className="text-xl md:text-4xl font-bold md:px-6 text-center md:text-left">Why Choose Us?</h2>
+                    <div className='w-100 h-1 bg-accentRed-dark my-4 md:mx-6 mx-auto'></div>
+                    <p className="text-gray-700 md:px-6 mx-4 md:mx-0 my-2 md:my-12 text-sm md:text-base text-justify">Choosing <span className='font-semibold text-black'>BETHMAR LIMITED</span> means partnering with a company that prioritizes quality, reliability, and innovation. <br /> Partner with us for your civil engineering and fibre infrastructure needs, and experience the difference that quality, expertise, and dedication can make. <br />  </p>
+                    <Link to="/contact" className="my-4 flex w-6/12 md:w-4/12 px-4 md:px-8 py-2 md:py-3 mx-auto md:mx-6 justify-center items-center bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-lg font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Contact Now <span className='ml-2 self-center'><FaPhone /></span> </Link>
                 </motion.div>
                 <motion.div
                     className=" md:w-1/2 md:px-4"
@@ -91,8 +91,8 @@ const Details = () => {
                                 <img src={descriptions[selected].img} alt="" className='w-auto h-auto  pb-4' />
                             </div>
                             <div className='md:w-6/12'>
-                                <h2 className='text-lg md:text-2xl font-semibold md:px-6 md:py-4'>{descriptions[selected].title}</h2>
-                                <p className="text-gray-700 md:px-6 my-2 md:my-4 px-2 text-sm md:text-base text-justify">
+                                <h2 className='text-lg md:text-2xl font-bold md:px-6 md:py-4'>{descriptions[selected].title}</h2>
+                                <p className="text-gray-700 md:px-6 my-2 md:my-4 text-sm md:text-base text-justify">
                                     {descriptions[selected].des}
                                 </p>
                             </div>

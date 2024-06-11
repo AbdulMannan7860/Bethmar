@@ -19,9 +19,9 @@ const ContactForm = () => {
                 >
                     <h2 className="text-left font-semibold text-lg md:text-4xl mb-3 ">Contact Us</h2>
                     <div className='w-5/12 h-1 bg-accentRed-dark mb-4'></div>
-                    <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
-                    <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Contact: 01707322748</p>
-                    <p className='px-4 md:px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Email: info@bethmar.co.uk</p>
+                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
+                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Contact: 01707322748</p>
+                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Email: info@bethmar.co.uk</p>
                 </motion.div>
                 <motion.div
                     className="md:w-1/2"
@@ -33,15 +33,15 @@ const ContactForm = () => {
                     <form className="max-w-xl mx-auto bg-white p-8 rounded shadow-lg">
                         <div className="mb-4">
                             <label className="block text-gray-700 mb-2 text-base" htmlFor="name">Name</label>
-                            <input className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-accentRed-light" type="text" id="name" name="name" />
+                            <input autoComplete='name' className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-accentRed-light" type="text" id="name" name="name" />
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 mb-2 text-base" htmlFor="email">Email</label>
-                            <input className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-accentRed-light" type="email" id="email" name="email" />
+                            <input autoComplete='email' className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-accentRed-light" type="email" id="email" name="email" />
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 mb-2 text-base" htmlFor="phone">Phone</label>
-                            <input className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-accentRed-light" type="text" id="phone" name="phone" />
+                            <input autoComplete='Phone' className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-accentRed-light" type="text" id="phone" name="phone" />
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 mb-2 text-base" htmlFor="subject">Subject</label>
