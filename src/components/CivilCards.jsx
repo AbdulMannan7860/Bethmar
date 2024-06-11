@@ -57,7 +57,7 @@ const services = [
 
 const CivilCards = () => {
     return (
-        <div className="px-4 md:p-8 max-w-screen-xl mx-auto">
+        <div className="px-4 md:p-8 max-w-[1400px] mx-auto">
             {services.map((service, index) => {
                 const [cardRef, cardInView] = useInView({ triggerOnce: true });
                 return (
@@ -77,7 +77,7 @@ const CivilCards = () => {
                             <img src={service.image} alt={`${service.Heading} image`} className='rounded-lg content-center w-full h-full object-cover' />
                         </div>
                         <div className='lg:w-2/3 w-full lg:ml-8 px-4 py-8 md:p-8'>
-                            <h2 className="text-center text-2xl font-bold mb-8 border-b-2 border-accentRed-dark pb-4">{service.Heading}</h2>
+                            <h2 className="text-center text-3xl font-bold mb-8 border-b-2 border-accentRed-dark pb-4">{service.Heading}</h2>
                             <div className='flex flex-col space-y-2'>
                                 {service.SubHeadings.map((subHeading, subIndex) => {
                                     const [subHeadingRef, subHeadingInView] = useInView({ triggerOnce: false });

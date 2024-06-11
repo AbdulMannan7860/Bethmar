@@ -29,10 +29,10 @@ const ServicesCards = () => {
 
     return (
         <div id="services" className="bg-gray-100">
-            <div className='text-center text-lg md:text-3xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
+            <div className='text-center text-lg md:text-5xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
                 <h2 className="mx-12 md:mx-auto">Check Out Our Comprehensive List of Services & Solutions</h2>
             </div>
-            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1300px] mx-4 md:mx-auto">
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-4 md:mx-auto">
                 {services.map((service, index) => {
                     const [ref, inView] = useInView({ triggerOnce: false });
 
@@ -46,15 +46,13 @@ const ServicesCards = () => {
                             transition={{ duration: 0.7, delay: index * 0.1 }}
                             className="flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 bg-white shadow-lg py-12 px-4 rounded-lg md:py-4"
                         >
-                            <img src={service.image} alt={service.text} className="w-24 h-24 md:w-32 md:h-32 object-cover object-center mx-auto" />
-                            <div
+                            <img src={service.image} alt={service.text} className="w-24 h-24 md:w-40 md:h-40 object-cover object-center mx-auto my-3" />
 
-                                className=' bg-accentRed animate-pulse my-3'></div>
                             <div
                                 className='p-4 flex-grow'
                             >
                                 <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black ">{service.text}</h3>
-                                <p className='text-gray-700 text-sm md:text-base py-4 text-justify'>{service.description}</p>
+                                <p className='text-gray-700 text-xs md:text-sm py-4 text-justify'>{service.description}</p>
                             </div>
                         </motion.div>
                     );

@@ -71,7 +71,7 @@ const FiberCards = () => {
                             <img src={service.image} alt={`${service.title} image`} className='rounded-lg h-full w-full object-cover content-center' />
                         </div>
                         <div className='lg:w-2/3 w-full lg:ml-8 px-4 py-8 md:p-8'>
-                            <h2 className="text-center text-2xl font-bold mb-8 border-b-2 border-accentRed-dark pb-4">{service.title}</h2>
+                            <h2 className="text-center text-3xl font-bold mb-8 border-b-2 border-accentRed-dark pb-4">{service.title}</h2>
                             <p className="text-gray-700 text-lg">{service.description}</p>
                         </div>
                     </motion.div>

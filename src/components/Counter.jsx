@@ -37,7 +37,7 @@ const Counter = ({ end, label }) => {
             >
                 {displayCount}
             </motion.div>
-            <p className="text-xl font-medium text-gray-700">{label}</p>
+            <p className="text-lg font-medium text-gray-700">{label}</p>
         </div>
     );
 };
@@ -64,7 +64,7 @@ const CounterSection = () => {
             transition={{ duration: 0.8, ease: "easeInOut" }}
         >
             <div className="container mx-auto bg-white p-8 shadow-lg">
-                <h2 className="text-center text-2xl md:text-4xl font-bold mb-8">Our Achievements</h2>
+                <h2 className="text-center text-2xl md:text-5xl font-bold mb-8">Our Achievements</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {counters.map((counter, index) => (
                         <Counter key={index} end={counter.end} label={counter.label} />

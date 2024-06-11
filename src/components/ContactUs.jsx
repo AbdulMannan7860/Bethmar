@@ -27,14 +27,14 @@ const ContactUs = () => {
                 >
                     <div className="flex flex-col md:flex-row">
                         <div className="md:w-1/2 p-4 md:p-8 bg-accentRed-dark text-white">
-                            <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
+                            <h2 className="text-4xl font-bold mb-4">Contact Us</h2>
                             <p className="italic text-lg">"Your quote goes here, providing inspiration or a call to action."</p>
                         </div>
                         <div className="md:w-1/2 p-4 md:p-8">
-                            <p className="mb-6">
+                            <p className="mb-6 text-base">
                                 We would love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.
                             </p>
-                            <Link to={'/contact'} className="bg-accentRed-dark text-white font-bold py-2 px-4 hover:bg-accentRed">
+                            <Link to={'/contact'} className="bg-accentRed-dark text-white font-bold py-3 px-6 hover:bg-accentRed text-sm">
                                 Contact Now
                             </Link>
                         </div>

@@ -17,11 +17,11 @@ const ContactForm = () => {
                     transition={{ duration: 0.5 }}
                     variants={formVariants}
                 >
-                    <h2 className="text-left font-semibold text-lg md:text-4xl mb-3 ">Contact Us</h2>
+                    <h2 className="text-left font-semibold text-lg md:text-5xl mb-3 ">Contact Us</h2>
                     <div className='w-5/12 h-1 bg-accentRed-dark mb-4'></div>
-                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
-                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Contact: 01707322748</p>
-                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-lg w-10/12 font-semibold'>Email: info@bethmar.co.uk</p>
+                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-base w-10/12 font-semibold'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
+                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-base w-10/12 font-semibold'>Contact: 01707322748</p>
+                    <p className='md:px-4 px-0 md:py-2 text-sm md:text-base w-10/12 font-semibold'>Email: info@bethmar.co.uk</p>
                 </motion.div>
                 <motion.div
                     className="md:w-1/2"

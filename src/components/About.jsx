@@ -69,16 +69,16 @@ const About = () => {
                 animate={aboutInView ? 'visible' : 'hidden'}
                 transition={{ duration: 0.7 }}
                 variants={aboutVariants}
-                className="container mx-auto flex flex-col md:flex-row items-center md:max-w-[1300px] bg-white rounded shadow-lg py-6">
+                className="container mx-auto flex flex-col md:flex-row items-center md:max-w-[1400px] bg-white rounded shadow-lg py-6">
                 <div
                     ref={aboutRef}
                     className="md:w-1/2 px-4"
 
                 >
-                    <h2 className="text-xl md:text-4xl font-semibold md:px-6 text-center md:text-left">About Us</h2>
-                    <div className='w-52 h-1 bg-accentRed-dark my-4 md:mx-6 mx-auto'></div>
+                    <h2 className="text-xl md:text-5xl font-semibold md:px-6 text-center md:text-left">About Us</h2>
+                    <div className='w-full h-1 bg-accentRed-dark my-4 md:mx-6 mx-auto'></div>
                     <p className="text-gray-700 md:px-6 my-2 md:my-8 text-sm md:text-base text-justify">BETHMAR LIMITED is a renowned leader in civil engineering and fibre infrastructure within the U.K. telecommunications industry. Founded in 2013, we have rapidly built a reputation for excellence and reliability, leveraging our expertise to deliver top-tier solutions. Our team of seasoned professionals is dedicated to enhancing the telecommunications landscape through innovative engineering practices and cutting-edge technology.</p>
-                    <Link to="/about" className=" my-4 px-4 md:px-8 py-2 md:py-3 flex mx-auto w-6/12 md:w-4/12 md:mx-4 justify-center items-center bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-lg font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More <span className="ml-2 self-center"> <FaArrowRight /> </span> </Link>
+                    <Link to="/about" className=" my-4 px-4 md:px-8 py-2 md:py-3 flex mx-auto w-6/12 md:w-4/12 md:mx-4 justify-center items-center bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-sm font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More <span className="ml-2 self-center"> <FaArrowRight /> </span> </Link>
                 </div>
                 <div
                     className="md:w-1/2 md:px-4"
@@ -86,10 +86,10 @@ const About = () => {
                     <img src={AboutUs} alt="About Us" className="w-full h-auto rounded md:px-0 px-4" />
                 </div>
             </motion.div>
-            <div className="py-12 mt-8" style={divStyle}>
-                <h2 className="text-center text-xl md:text-4xl font-semibold text-white">Our Projects</h2>
+            <div className="py-12 mt-12" style={divStyle}>
+                <h2 className="text-center text-xl md:text-5xl font-semibold text-white">Our Projects</h2>
                 <div className='w-72 h-1 bg-accentRed-dark my-4 mx-auto mb-8'></div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:max-w-[1300px] mx-auto md:px-0 px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:max-w-[1400px] mx-auto md:px-0 px-4">
                     {Projects.map((project, index) => {
                         const [ref, inView] = useInView({ triggerOnce: false });
                         const [pRef, pInView] = useInView({
@@ -122,11 +122,11 @@ const About = () => {
                                         exit="hidden"
                                         variants={aboutVariants}
                                     >
-                                        <p ref={pRef} className={`${expanded[index] ? 'text-justify' : 'line-clamp-4 text-justify'} text-base`}>{project.description}</p>
+                                        <p ref={pRef} className={`${expanded[index] ? 'text-justify' : 'line-clamp-4 text-justify'} text-sm`}>{project.description}</p>
                                     </motion.div>
                                 </AnimatePresence>
                                 <button
-                                    className="mt-4 px-4 py-2 bg-transparent border-accentRed border text-accentRed rounded hover:bg-accentRed-dark hover:border-accentRed-dark hover:text-white transition-colors duration-300 text-sm md:text-base"
+                                    className="mt-4 px-4 py-2 bg-transparent border-accentRed border text-accentRed rounded hover:bg-accentRed-dark hover:border-accentRed-dark hover:text-white transition-colors duration-300 text-xs md:text-xs"
                                     onClick={() => toggleExpand(index)}
                                 >
                                     {expanded[index] ? 'Read Less' : 'Read More'}
