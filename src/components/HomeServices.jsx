@@ -22,8 +22,8 @@ const HomeServices = () => {
 
     return (
         <div id="services" className="bg-gray-100">
-            <div className='text-center text-lg md:text-5xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
-                <h2 className="mx-12 md:mx-auto">Services And Solutions</h2>
+            <div className='text-center text-3xl md:text-5xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
+                <h2 className="md:mx-auto">Services And Solutions</h2>
             </div>
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-4 md:mx-auto">
                 {services.map((service, index) => {
@@ -43,8 +43,8 @@ const HomeServices = () => {
                             <div
                                 className='p-4 flex-grow'
                             >
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black ">{service.text}</h3>
-                                <p className='text-gray-700 text-sm md:text-sm py-4 text-justify'>{service.description}</p>
+                                <h3 className="text-lg md:text-2xl font-semibold mb-2 text-black ">{service.text}</h3>
+                                <p className='text-gray-700 text-xs md:text-sm py-4 text-justify'>{service.description}</p>
                             </div>
                             <div className='md:w-6/12 mx-auto'>
                                 <Link to="/services" className="items-center justify-center px-4 flex w-12/12 md:px-8 py-2 md:py-3 bg-accentRed-dark border-2 border-accentRed-dark text-white text-xs md:text-sm font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More <span className="ml-2 self-center"> <FaArrowRight /> </span> </Link>

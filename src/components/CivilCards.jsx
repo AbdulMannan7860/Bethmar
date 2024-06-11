@@ -57,7 +57,7 @@ const services = [
 
 const CivilCards = () => {
     return (
-        <div className="px-4 md:p-8 max-w-[1400px] mx-auto">
+        <div className="px-4 md:p-8 max-w-[1400px] mx-auto overflow-auto">
             {services.map((service, index) => {
                 const [cardRef, cardInView] = useInView({ triggerOnce: true });
                 return (
@@ -73,11 +73,11 @@ const CivilCards = () => {
                         }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                        <div className='lg:w-1/3 w-full h-[400px] p-2 md:mx-4'>
+                        <div className='lg:w-1/3 w-full h-[250px] md:h-[400px] p-2 md:mx-4'>
                             <img src={service.image} alt={`${service.Heading} image`} className='rounded-lg content-center w-full h-full object-cover' />
                         </div>
-                        <div className='lg:w-2/3 w-full lg:ml-8 px-4 py-8 md:p-8'>
-                            <h2 className="text-center text-3xl font-bold mb-8 border-b-2 border-accentRed-dark pb-4">{service.Heading}</h2>
+                        <div className='lg:w-2/3 w-full lg:ml-8 p-4 md:p-8'>
+                            <h2 className="text-center text-lg md:text-3xl font-bold mb-8 border-b-2 border-accentRed-dark pb-4">{service.Heading}</h2>
                             <div className='flex flex-col space-y-2'>
                                 {service.SubHeadings.map((subHeading, subIndex) => {
                                     const [subHeadingRef, subHeadingInView] = useInView({ triggerOnce: false });
@@ -92,9 +92,9 @@ const CivilCards = () => {
                                                 visible: { opacity: 1, x: 0 }
                                             }}
                                             transition={{ duration: 0.5 }}
-                                            className='bg-gray-100 p-3 rounded-lg'
+                                            className=' md:p-4 rounded-lg'
                                         >
-                                            <h3 className="text-lg mb-2 text-gray-700">{subHeading}</h3>
+                                            <h3 className="text-xs mb-2 text-gray-700">{subHeading}</h3>
                                         </motion.div>
                                     );
                                 })}

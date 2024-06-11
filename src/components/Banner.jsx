@@ -74,7 +74,7 @@ const Banner = () => {
             >
                 {slides.map((slide, index) => (
                     <div
-                        className="flex items-center justify-center h-[40vh] md:h-[90vh] p-8"
+                        className="flex items-center justify-center h-[60vh] md:h-[100vh] p-8"
                         key={slide.id}
                         style={divStyle}
                     >
@@ -95,7 +95,7 @@ const Banner = () => {
                                         </motion.h2>
                                         <motion.button
                                             key={`button-${slide.id}`}
-                                            className="mt-4 px-4 md:px-8 py-2 md:py-3 bg-accentRed-dark border-2 border-accentRed-dark text-white text-base md:text-xl font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105"
+                                            className="mt-4 px-4 md:px-8 py-2 md:py-3 bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-xl font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105"
                                             initial="initial"
                                             animate="animate"
                                             exit="exit"
