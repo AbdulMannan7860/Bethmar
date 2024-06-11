@@ -51,7 +51,7 @@ const fiberServices = [
 
 const FiberCards = () => {
     return (
-        <div className="px-4 md:p-8 max-w-screen-xl mx-auto">
+        <div className="px-4 md:p-8 max-w-screen-xl mx-auto overflow-auto">
             {fiberServices.map((service, index) => {
                 const [ref, inView] = useInView({
                     triggerOnce: false,
@@ -67,12 +67,12 @@ const FiberCards = () => {
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         className='bg-white shadow-lg rounded my-6 md:my-12 flex flex-col lg:flex-row items-center'
                     >
-                        <div className='lg:w-1/3 w-full h-[400px] p-2 md:mx-4'>
+                        <div className='lg:w-1/3 w-full h-[250px] md:h-[400px] p-2 md:mx-4'>
                             <img src={service.image} alt={`${service.title} image`} className='rounded-lg h-full w-full object-cover content-center' />
                         </div>
                         <div className='lg:w-2/3 w-full lg:ml-8 px-4 py-8 md:p-8'>
-                            <h2 className="text-center text-3xl font-bold mb-8 border-b-2 border-accentRed-dark pb-4">{service.title}</h2>
-                            <p className="text-gray-700 text-lg">{service.description}</p>
+                            <h2 className="text-center text-xl md:text-2xl font-bold mb-8 border-b-2 border-accentRed-dark pb-4">{service.title}</h2>
+                            <p className="text-gray-700 text-xs md:text-sm">{service.description}</p>
                         </div>
                     </motion.div>
                 );
