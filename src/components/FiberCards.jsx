@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import img from '../assets/Footer.jpeg';
 import cabinetRacking from '../assets/CabinetRacking.jpg';
-import directionalDrilling from '../assets/DirectionalDrilling.jpg';
-import blockageRepair from '../assets/BlockageRepair.jpg';
+import poleAccess from '../assets/PIA.png';
 
 const fiberServices = [
     {
@@ -20,28 +19,14 @@ const fiberServices = [
     {
         title: "Pole Access",
         description: "We’re bringing FTTx solutions to premises across the UK through pole access.",
-        image: img
+        image: poleAccess
     },
     {
         title: "Blown Fibre",
         description: "We are recognised industry experts in delivering blown fibre solutions.",
         image: img
     },
-    {
-        title: "Mole Ploughing",
-        description: "We possess in-house mole plough equipment, enabling us to build quickly in soft surfaces.",
-        image: img
-    },
-    {
-        title: "Directional Drilling",
-        description: "We are directional drilling experts, specialising in all types of thrust-boring and drilling.",
-        image: directionalDrilling
-    },
-    {
-        title: "Duct Laying and Maintenance",
-        description: "We are able to utilise, lay, unblock and maintain all types of traditional and micro duct on civils builds.",
-        image: blockageRepair
-    },
+
     {
         title: "PIA/DPA Solutions",
         description: "Providing Physical Infrastructure Access (PIA) and Duct and Pole Access (DPA) solutions to ensure efficient infrastructure deployment.",
@@ -51,7 +36,7 @@ const fiberServices = [
 
 const FiberCards = () => {
     return (
-        <div className="px-4 md:p-8 max-w-screen-xl mx-auto overflow-auto">
+        <div className="px-4 md:p-8 max-w-screen-xl mx-auto overflow-hidden">
             {fiberServices.map((service, index) => {
                 const [ref, inView] = useInView({
                     triggerOnce: false,

@@ -21,7 +21,7 @@ const HomeServices = () => {
     };
 
     return (
-        <div id="services" className="bg-gray-100">
+        <div className="bg-gray-100">
             <div className='text-center text-3xl md:text-5xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
                 <h2 className="md:mx-auto">Services And Solutions</h2>
             </div>
@@ -47,7 +47,7 @@ const HomeServices = () => {
                                 <p className='text-gray-700 text-xs md:text-sm py-4 text-justify'>{service.description}</p>
                             </div>
                             <div className='md:w-6/12 mx-auto'>
-                                <Link to="/services" className="items-center justify-center px-4 flex w-12/12 md:px-8 py-2 md:py-3 bg-accentRed-dark border-2 border-accentRed-dark text-white text-xs md:text-sm font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More <span className="ml-2 self-center"> <FaArrowRight /> </span> </Link>
+                                <Link to="/services" className="items-center justify-center px-4 flex w-12/12 md:px-8 py-2 md:py-3 text-accentRed-dark border-2 border-accentRed-dark text-xs md:text-sm font-semibold shadow-md hover:text-white hover:bg-accentRed-dark hover:border-accentRed-dark transition-transform transform hover:scale-105">Learn More <span className="ml-2 self-center"> <FaArrowRight /> </span> </Link>
                             </div>
                         </motion.div>
                     );
