@@ -11,18 +11,18 @@ const Footer = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundAttachment: 'fixed',
+        backgroundAttachment: 'relative',
     }
 
     return (
         <div style={divStyle} className="py-4 md:py-8 text-white">
             <div className="max-w-[1400px] flex flex-col md:flex-row justify-between items-center mx-auto border-b border-gray-700 py-4 md:py-8 px-4 md:px-0">
                 <div className="text-sm md:text-base px-4">
-                    <img src={logo} alt="Company Logo" className="w-auto h-[60px] md:h-[100px] " />
-                    <p className='py-2 px-4'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
-                    <p className='py-2 px-4'>Contact: 01707322748</p>
-                    <p className='py-2 px-4'>Email: info@bethmar.co.uk</p>
-                    <div className="flex space-x-4 mt-4 px-4">
+                    <img src={logo} alt="Company Logo" className="w-auto h-[40px] md:h-[80px] " />
+                    <p className='py-2'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
+                    <p className='py-2'>Contact: 01707322748</p>
+                    <p className='py-2'>Email: info@bethmar.co.uk</p>
+                    <div className="flex space-x-4 mt-4">
                         <a href='#'><FaSquareFacebook className='h-8 w-8 hover:text-accentRed-dark duration-300 transition-colors' /></a>
                         <a href='#'><FaLinkedin className='h-8 w-8 hover:text-accentRed-dark duration-300 transition-colors' /></a>
                     </div>

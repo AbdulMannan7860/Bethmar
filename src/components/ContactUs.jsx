@@ -28,7 +28,7 @@ const ContactUs = () => {
                     <div className="flex flex-col md:flex-row">
                         <div className="md:w-1/2 p-4 md:p-8 bg-accentRed-dark text-white">
                             <h2 className="text-2xl md:text-4xl font-bold mb-4">Contact Us</h2>
-                            <p className="italic text-sm md:text-lg">"Your quote goes here, providing inspiration or a call to action."</p>
+                            <p className="italic text-sm md:text-lg">"The way to get started is to quit talking and begin doing." - William Disney</p>
                         </div>
                         <div className="md:w-1/2 p-4 md:p-8">
                             <p className="mb-6 text-sm md:text-base">

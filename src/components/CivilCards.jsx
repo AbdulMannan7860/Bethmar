@@ -4,7 +4,8 @@ import { useInView } from 'react-intersection-observer';
 import img from '../assets/Footer.jpeg';
 import cableInstallation from '../assets/CableInstallation.jpg';
 import faultsMaintainance from '../assets/FaultsMaintainance.jpg';
-
+import directionalDrilling from '../assets/DirectionalDrilling.jpg';
+import blockageRepair from '../assets/BlockageRepair.jpg';
 const services = [
     {
         Heading: 'PLANNING / DESIGN & CONSULTANCY',
@@ -46,18 +47,34 @@ const services = [
         image: cableInstallation
     },
     {
-        Heading: 'FAULTS & MAINTENANCE',
+        Heading: 'Mole Ploughing',
         SubHeadings: [
             "EHV Fault Repairs",
             "Substation Maintenance"
         ],
         image: faultsMaintainance
+    },
+    {
+        Heading: 'Directional Drilling',
+        SubHeadings: [
+            "EHV Fault Repairs",
+            "Substation Maintenance"
+        ],
+        image: directionalDrilling
+    },
+    {
+        Heading: 'Duct Laying',
+        SubHeadings: [
+            "EHV Fault Repairs",
+            "Substation Maintenance"
+        ],
+        image: blockageRepair
     }
 ];
 
 const CivilCards = () => {
     return (
-        <div className="px-4 md:p-8 max-w-[1400px] mx-auto overflow-auto">
+        <div className="px-4 md:p-8 max-w-[1400px] mx-auto overflow-hidden">
             {services.map((service, index) => {
                 const [cardRef, cardInView] = useInView({ triggerOnce: true });
                 return (
@@ -92,9 +109,9 @@ const CivilCards = () => {
                                                 visible: { opacity: 1, x: 0 }
                                             }}
                                             transition={{ duration: 0.5 }}
-                                            className=' md:p-4 rounded-lg'
+                                            className=' md:p-2 rounded-lg'
                                         >
-                                            <h3 className="text-xs mb-2 text-gray-700">{subHeading}</h3>
+                                            <h3 className="text-xs text-gray-700">{subHeading}</h3>
                                         </motion.div>
                                     );
                                 })}
