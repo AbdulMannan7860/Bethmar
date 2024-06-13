@@ -9,7 +9,7 @@ import project2 from '../assets/Project2.jpg';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 
-const About = () => {
+const AboutComponent = () => {
     const divStyle = {
         backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.0)), linear-gradient(to top, rgba(0,0,0,0.0), rgba(0,0,0,0.6)) , url(${transformer})`,
         backgroundPosition: 'center',
@@ -152,4 +152,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default AboutComponent;

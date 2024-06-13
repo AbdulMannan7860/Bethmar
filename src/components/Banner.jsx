@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import banner1 from '../assets/excavator.jpeg';
+import banner1 from '../assets/Excavator1.jpg';
 import banner2 from '../assets/fiberRoll.jpg';
 import banner3 from '../assets/Underground.jpeg';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -35,13 +35,13 @@ const Banner = () => {
             id: 0,
             text: "Empowering Connections, Endless Possibilities.",
             buttonText: "Learn More",
-            background: banner2
+            background: banner1
         },
         {
             id: 1,
             text: "Transforming Infrastructure, Enhancing Lives.",
             buttonText: "Get Started",
-            background: banner1
+            background: banner2
         },
         {
             id: 2,
@@ -61,7 +61,7 @@ const Banner = () => {
     };
 
     return (
-        <div id="home" className="bg-no-repeat bg-cover bg-center">
+        <div className="bg-no-repeat bg-cover bg-center">
             <Carousel
                 showThumbs={true}
                 autoPlay

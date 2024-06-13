@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import About from '../components/About'
+import About from '../components/AboutComponent'
 import Details from '../components/Details'
 import CounterSection from '../components/Counter'
 import ContactUs from '../components/ContactUs'
