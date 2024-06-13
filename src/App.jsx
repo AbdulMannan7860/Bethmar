@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './Pages/Home';
-import Services from './Pages/Services';
 import NotFound from './Pages/NotFound';
 import Civil from './Pages/Civil';
 import Fiber from './Pages/Fiber';
@@ -11,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import DesignVal from './Pages/DesignVal';
 import Traffic from './Pages/Traffic';
 import Reinstatement from './Pages/Reinstatement';
+import About from './Pages/About';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,7 +30,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/services" element={<Services />} />
+          <Route exact path="/about" element={<About />} />
           <Route exact path="/civil" element={<Civil />} />
           <Route exact path="/fiber" element={<Fiber />} />
           <Route exact path="/contact" element={<Contact />} />

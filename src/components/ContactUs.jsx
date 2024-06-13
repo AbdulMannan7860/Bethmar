@@ -16,7 +16,7 @@ const ContactUs = () => {
 
     return (
         <div className="bg-gray-100 py-12">
-            <div className="container mx-auto px-4 md:px-8 lg:px-12">
+            <div className="mx-auto px-4 md:px-8 lg:px-12">
                 <motion.div
                     ref={ref}
                     className="bg-white shadow-lg overflow-hidden"
