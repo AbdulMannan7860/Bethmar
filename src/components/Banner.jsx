@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import banner1 from '../assets/Excavator1.jpg';
+import banner1 from '../assets/excavator.jpeg';
 import banner2 from '../assets/fiberRoll.jpg';
 import banner3 from '../assets/Underground.jpeg';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,7 +15,7 @@ const Banner = () => {
         setTimeout(() => {
             setCurrentSlide(index);
             setIsExiting(false);
-        }, 500);
+        }, 300);
     };
 
     const slideVariants = {
@@ -33,15 +33,15 @@ const Banner = () => {
     const slides = [
         {
             id: 0,
-            text: "Transforming Infrastructure, Enhancing Lives.",
-            buttonText: "Get Started",
-            background: banner1
-        },
-        {
-            id: 1,
             text: "Empowering Connections, Endless Possibilities.",
             buttonText: "Learn More",
             background: banner2
+        },
+        {
+            id: 1,
+            text: "Transforming Infrastructure, Enhancing Lives.",
+            buttonText: "Get Started",
+            background: banner1
         },
         {
             id: 2,
@@ -63,11 +63,11 @@ const Banner = () => {
     return (
         <div id="home" className="bg-no-repeat bg-cover bg-center">
             <Carousel
-                showThumbs={false}
+                showThumbs={true}
                 autoPlay
                 infiniteLoop
                 interval={6000}
-                transitionTime={1000}
+                transitionTime={500}
                 onChange={handleSlideChange}
                 selectedItem={currentSlide}
                 stopOnHover={false}

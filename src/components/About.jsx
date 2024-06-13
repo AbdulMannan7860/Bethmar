@@ -22,19 +22,32 @@ const About = () => {
         {
             image: project1,
             text: 'London Urban Fibre Optic Expansion',
-            description: "The London Urban Fibre Optic Expansion project was a comprehensive initiative aimed at upgrading the telecommunications infrastructure in the heart of London. BETHMAR LIMITED spearheaded this project, deploying advanced Fibre optic networks to enhance connectivity for both residential and commercial areas. The project involved meticulous planning and execution, including the installation of Fibre optic cables both underground and aerially across various districts. This upgrade significantly improved internet speeds and reliability, supporting the city's growing demand for high-speed internet. Our team worked around the clock, ensuring minimal disruption to the public while adhering to the highest safety standards. The success of this project has set a new benchmark for urban telecommunications infrastructure. Throughout the project's duration, BETHMAR LIMITED faced and overcame numerous challenges, from navigating complex urban landscapes to coordinating with multiple stakeholders. Our expertise in civil engineering and Fibre optics was crucial in achieving seamless integration with existing systems. The project not only boosted connectivity but also paved the way for future technological advancements in London's telecommunications sector."
+            description: `
+                The London Urban Fibre Optic Expansion project was a comprehensive initiative aimed at upgrading the telecommunications infrastructure in the heart of London. BETHMAR LIMITED spearheaded this project, deploying advanced Fibre optic networks to enhance connectivity for both residential and commercial areas.
+                The project involved meticulous planning and execution, including the installation of Fibre optic cables both underground and aerially across various districts. This upgrade significantly improved internet speeds and reliability, supporting the city's growing demand for high-speed internet. Our team worked around the clock, ensuring minimal disruption to the public while adhering to the highest safety standards.
+                The success of this project has set a new benchmark for urban telecommunications infrastructure. Throughout the project's duration, BETHMAR LIMITED faced and overcame numerous challenges, from navigating complex urban landscapes to coordinating with multiple stakeholders. Our expertise in civil engineering and Fibre optics was crucial in achieving seamless integration with existing systems. The project not only boosted connectivity but also paved the way for future technological advancements in London's telecommunications sector.
+            `
         },
         {
             image: project2,
             text: 'Rural Broadband Initiative',
-            description: "The Rural Broadband Initiative was a transformative project designed to bring high-speed internet to underserved rural communities. BETHMAR LIMITED played a pivotal role in this initiative, leveraging trenchless technology to lay Fibre optic cables across vast and challenging terrains. This project aimed to bridge the digital divide, providing rural areas with the same quality of internet access as urban centers. Our team conducted extensive field surveys and collaborated closely with local authorities to ensure the project's success. The Rural Broadband Initiative has empowered communities with better access to education, healthcare, and economic opportunities, driving significant socio-economic development. In addition to improving connectivity, the project also focused on training and employing local workforce, fostering community involvement, and ensuring sustainable practices. BETHMAR LIMITED’s commitment to innovation and excellence was evident in every phase of the project, from initial planning to final deployment. The positive impact of this initiative continues to resonate, enhancing the quality of life in rural areas and contributing to their long-term growth and development."
+            description: `
+                The Rural Broadband Initiative was a transformative project designed to bring high-speed internet to underserved rural communities. BETHMAR LIMITED played a pivotal role in this initiative, leveraging trenchless technology to lay Fibre optic cables across vast and challenging terrains. This project aimed to bridge the digital divide, providing rural areas with the same quality of internet access as urban centers.
+                Our team conducted extensive field surveys and collaborated closely with local authorities to ensure the project's success. The Rural Broadband Initiative has empowered communities with better access to education, healthcare, and economic opportunities, driving significant socio-economic development.
+                In addition to improving connectivity, the project also focused on training and employing local workforce, fostering community involvement, and ensuring sustainable practices. BETHMAR LIMITED’s commitment to innovation and excellence was evident in every phase of the project, from initial planning to final deployment. The positive impact of this initiative continues to resonate, enhancing the quality of life in rural areas and contributing to their long-term growth and development.
+            `
         },
         {
             image: about,
             text: 'Smart City Infrastructure Development',
-            description: "The Smart City Infrastructure Development project is a forward-looking initiative aimed at integrating cutting-edge technology into urban planning. BETHMAR LIMITED was tasked with deploying a robust Fibre optic network to support various smart city applications, including traffic management, public safety, and energy efficiency. This project involved installing high-capacity Fibre optic cables and connecting key infrastructures such as traffic lights, surveillance cameras, and utility meters. Our team’s expertise in civil engineering and telecommunications ensured the seamless implementation of this complex project. The Smart City Infrastructure Development is a testament to our commitment to innovation and sustainability in urban development. <br/> By leveraging the latest technology, the project has enhanced the city's operational efficiency and quality of life for its residents. BETHMAR LIMITED’s role extended beyond installation; we also provided ongoing maintenance and support to ensure the network's reliability and performance. The success of this project has positioned the city as a model for smart urban development, showcasing how advanced telecommunications infrastructure can drive modernization and growth."
+            description: `
+                The Smart City Infrastructure Development project is a forward-looking initiative aimed at integrating cutting-edge technology into urban planning. BETHMAR LIMITED was tasked with deploying a robust Fibre optic network to support various smart city applications, including traffic management, public safety, and energy efficiency.
+                This project involved installing high-capacity Fibre optic cables and connecting key infrastructures such as traffic lights, surveillance cameras, and utility meters. Our team’s expertise in civil engineering and telecommunications ensured the seamless implementation of this complex project.
+                The Smart City Infrastructure Development is a testament to our commitment to innovation and sustainability in urban development. By leveraging the latest technology, the project has enhanced the city's operational efficiency and quality of life for its residents. BETHMAR LIMITED’s role extended beyond installation; we also provided ongoing maintenance and support to ensure the network's reliability and performance. The success of this project has positioned the city as a model for smart urban development, showcasing how advanced telecommunications infrastructure can drive modernization and growth.
+            `
         },
     ];
+
 
     const [expanded, setExpanded] = useState(Array(Projects.length).fill(false));
 
@@ -63,7 +76,7 @@ const About = () => {
     const [aboutRef, aboutInView] = useInView({ triggerOnce: false });
 
     return (
-        <div id="about" className="py-12 bg-gray-100 mx-auto">
+        <div className="py-12 bg-gray-100 mx-auto">
             <motion.div
                 initial="hidden"
                 animate={aboutInView ? 'visible' : 'hidden'}
@@ -76,7 +89,7 @@ const About = () => {
 
                 >
                     <h2 className="text-3xl md:text-5xl font-semibold md:px-6 text-center md:text-left">About Us</h2>
-                    <div className='w-full h-1 bg-accentRed-dark my-4 md:mx-6 mx-auto'></div>
+                    <div className='w-full h-1 my-4 md:mx-6 mx-auto'></div>
                     <p className="text-gray-700 md:px-6 my-2 md:my-8 text-xs md:text-base text-justify">BETHMAR LIMITED is a renowned leader in civil engineering and fibre infrastructure within the U.K. telecommunications industry. Founded in 2013, we have rapidly built a reputation for excellence and reliability, leveraging our expertise to deliver top-tier solutions. Our team of seasoned professionals is dedicated to enhancing the telecommunications landscape through innovative engineering practices and cutting-edge technology.</p>
                     <Link to="/about" className=" my-4 px-4 md:px-8 py-2 md:py-3 flex mx-auto w-6/12 md:w-4/12 md:mx-4 justify-center items-center bg-accentRed-dark border-2 border-accentRed-dark text-white text-sm md:text-sm font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Learn More <span className="ml-2 self-center"> <FaArrowRight /> </span> </Link>
                 </div>
@@ -86,7 +99,7 @@ const About = () => {
                     <img src={AboutUs} alt="About Us" className="w-full h-auto rounded md:px-0 px-4" />
                 </div>
             </motion.div>
-            <div className="py-12 mt-12" style={divStyle}>
+            <div id='project' className="py-12 mt-12" style={divStyle}>
                 <h2 className="text-center text-3xl md:text-5xl font-semibold text-white">Our Projects</h2>
                 <div className='w-72 h-1 bg-accentRed-dark my-4 mx-auto mb-8'></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:max-w-[1400px] mx-auto md:px-0 px-4">
@@ -114,15 +127,14 @@ const About = () => {
                                 <h3 className="text-lg md:text-xl mb-2 font-bold">{project.text}</h3>
                                 <AnimatePresence>
                                     <motion.div
-                                        id={`project${index}`}
                                         key={`description-${index}`}
-                                        className={`text-sm md:text-base text-gray-700 overflow-hidden transition-all duration-500 ease-in-out`}
+                                        className={`text-xs md:text-sm text-gray-700 overflow-hidden transition-all duration-500 ease-in-out`}
                                         initial="hidden"
                                         animate="visible"
                                         exit="hidden"
                                         variants={aboutVariants}
                                     >
-                                        <p ref={pRef} className={`${expanded[index] ? 'text-justify' : 'line-clamp-4 text-justify'} text-sm`}>{project.description}</p>
+                                        <p ref={pRef} className={`${expanded[index] ? '' : 'line-clamp-4'} text-justify text-sm`}>{project.description}</p>
                                     </motion.div>
                                 </AnimatePresence>
                                 <button

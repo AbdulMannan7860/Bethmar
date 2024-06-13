@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="max-w-[1400px] flex flex-col md:flex-row justify-between items-center mx-auto border-b border-gray-700 py-4 md:py-8 px-4 md:px-0">
                 <div className="text-sm md:text-base px-4">
                     <img src={logo} alt="Company Logo" className="w-auto h-[40px] md:h-[80px] " />
-                    <p className='py-2'>Location: 17 PENNINE PARADE PENNINE DRIVE, LONDON, NW2 1NT, GB</p>
+                    <p className='py-2'>Location: Suite 2,Wentworth Lodge, Great North Road, Welwyn Garden City, AL8 7SR</p>
                     <p className='py-2'>Contact: 01707322748</p>
                     <p className='py-2'>Email: info@bethmar.co.uk</p>
                     <div className="flex space-x-4 mt-4">
@@ -39,14 +39,14 @@ const Footer = () => {
                     <div className="self-center px-4">
                         <h4 className="mb-4 md:text-2xl font-serif text-lg font-bold text-accentRed-dark ">Our Projects</h4>
                         <ol className='md:text-base text-base px-1'>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project1">London Urban Fibre Optic Expansion</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project2">Rural Broadband Initiative</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project3">Smart City Infrastructure Development</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project">London Urban Fibre Optic Expansion</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project">Rural Broadband Initiative</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project">Smart City Infrastructure Development</a></li>
                         </ol>
                     </div>
                 </div>
             </div>
-            <div className="pt-4 text-center text-xs md:text-sm max-w-[1200px] mx-auto px-4 md:px-0 ">
+            <div className="pt-4 text-center text-xs md:text-sm max-w-[1400px] mx-auto px-4 md:px-0 ">
                 <div className="flex justify-between items-center">
                     <div className='self-center'>
                         <a href="#terms" className="mr-4">Terms & Conditions</a>
